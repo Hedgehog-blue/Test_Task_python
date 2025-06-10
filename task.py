@@ -10,7 +10,14 @@ class LinkedList:
 
 
     def add(self, value):
-        pass
+        new_node = Node(value)
+        if not self.head:
+            self.head = new_node
+            return 
+        current = self.head 
+        while current.next:
+            current = current.next
+        current.next = new_node
 
 
     def get_length(self):
