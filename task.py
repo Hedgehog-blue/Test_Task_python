@@ -6,7 +6,7 @@ class Node:
          
 class LinkedList:
     def __init__(self):
-        pass
+        self.head = None
 
 
     def add(self, value):
@@ -14,7 +14,12 @@ class LinkedList:
 
 
     def get_length(self):
-        pass
+        count = 0
+        current = self.head 
+        while current:
+            count += 1
+            current = current.next 
+        return current
 
 
     def get_element(self):
