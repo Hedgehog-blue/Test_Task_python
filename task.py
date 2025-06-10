@@ -26,18 +26,20 @@ class LinkedList:
         while current:
             count += 1
             current = current.next 
-        return current
+        return count
 
 
     def get_element(self):
-        n = self.get_length
+        n = self.get_length()
         if n <= 1:
             return None 
-        index = (2 * n) // (3 - 1)
+        index = (2 * n) // 3 - 1
         current = self.head 
         for i in range(index):
+            if current is None:
+                return None 
             current = current.next 
-        return current.value
+        return current.value if current else None
 
     
 
