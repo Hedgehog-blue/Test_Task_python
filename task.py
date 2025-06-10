@@ -30,7 +30,14 @@ class LinkedList:
 
 
     def get_element(self):
-        pass
+        n = self.get_length
+        if n <= 1:
+            return None 
+        index = (2 * n) // (3 - 1)
+        current = self.head 
+        for i in range(index):
+            current = current.next 
+        return current.value
 
     
 
